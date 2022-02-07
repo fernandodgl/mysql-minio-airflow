@@ -50,10 +50,12 @@ Tool that estimates if a employee is more likely to leave the company or not and
  # Installing and configuring Apache Airflow
  1. Inside your main folder, create another subfolder called 'airflow'
  2. Copy the subfolder Dags (with all the 7 .py files) available here to your subfolder airflow. Your directory structure now should look like this:
-    'your_folder' -
-                   | - datalake
-                   | - aiflow
-                             | - dags
+  
+     Folder      | Subfolder
+     ------------|------------
+      datalake   | 
+       airflow   | dags
+    
  3. Inside the main folder, open again your terminal and type: 
     3a. (for Airflow container building):
      'docker run -d -p 8080:8080 -v "$PWD/airflow/dags:/opt/airflow/dags/" --entrypoint=/bin/bash --name airflow        apache/airflow:2.1.1-python3.8 -c '(airflow db init && airflow users create --username admin --password password --firstname Firstname --lastname Lastname --role Admin --email admin@example.org); airflow webserver & airflow scheduler'  
@@ -117,5 +119,7 @@ Tool that estimates if a employee is more likely to leave the company or not and
  After that, run the following commands:
 	. pip install streamlit (installing the library on the enviroment of the project)
 	. streamlit run 'directory where app.py is saved (for example; 'c:/Users/****/Documents/Hrproject/app.py')
- Just wait a few seconds and... voilá! App is running on your browser! 
- ***Feel free to try different settings and find interesting 'intel' about your employees! ***
+ 
+ <p>Just wait a few seconds and... voilá! App is running on your browser! </p>
+ 
+ <p>*** Feel free to try different settings and find interesting 'intel' about your employees! ***</p>

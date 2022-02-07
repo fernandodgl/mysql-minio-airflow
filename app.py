@@ -1,6 +1,6 @@
 #carregando as bibliotecas
-import pandas as pd
 import streamlit as st
+import pandas as pd
 from minio import Minio
 import joblib
 import matplotlib.pyplot as plt
